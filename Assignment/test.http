@@ -1,0 +1,41 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+    {
+        "firstName": "Wawan",
+        "lastName": "Jamalludin",
+        "email": "Syizwan.Jamalludin@gmail.com",
+        "password": "wawan2eyh"
+    }
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+    {
+        "firstName": "James",
+        "lastName": "Dean",
+        "email": "Dean.James@gmail.com",
+        "password": "Dean2eyh"
+    }
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+    {
+        "email": "Syizwan.Jamalludin@gmail.com",
+        "password": "wawan2eyh"
+    }
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+    {
+        "email": "Dean.James@gmail.com",
+        "password": "Dean2eyh"
+    } 
+
+GET http://localhost:3000/users-details
+Authorization: Bearer 
+
+GET http://localhost:3000/my-profile
+Authorization: Bearer 
