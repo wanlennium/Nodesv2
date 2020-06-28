@@ -9,9 +9,11 @@ const userMiddleware = require("../middlewares/user")
 
 router.route("/register").post(userController.userReg);
 
-router.route("/users-details").get( userMiddleware.authUser ,userController.usersDetail);
+router.route("/all-users").get( userMiddleware.authUser ,userController.allUser);
 
-router.route("/my-profile").get( userMiddleware.authUser ,userController.userProfile);
+router.route("/user/:userId").get( userMiddleware.authUser ,userController.userProfile);
+
+router.route("/my-profile").get( userMiddleware.authUser ,userController.myProfile);
 
 
 router.route("/login").post(userController.login);

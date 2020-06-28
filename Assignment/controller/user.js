@@ -4,7 +4,7 @@ const jToken = require("jsonwebtoken");
 
 
 
-exports.usersDetail = (req, res, next) => {
+exports.allUser = (req, res, next) => {
     User.findAll({ attributes: {exclude: ["password",] }})
     .then((users) => {
         res.send(users);
@@ -13,13 +13,22 @@ exports.usersDetail = (req, res, next) => {
 };
 
 exports.userProfile = (req, res, next) => {
-    // const uProfile  = req.params.
-    User.findOne( { attributes: {exclude: ["password",] }})
-    .then((users) => {
-        res.send(users);
+    const userId  = req.params.userId;
+    User.findByPk(userId ,  { attributes: {exclude: ["password",] }})
+    .then((user) => {
+        res.send(user);
     })
     .catch(err => console.log(err));
 };
+
+exports.myProfile = (req, res, next) => {
+    const user = req.user;
+    res.send(user);
+};
+
+exports.deleteUser = (req, res, next) => {};
+
+
 
 exports.userReg = (req, res, next) => {
     const firstName = req.body.firstName;

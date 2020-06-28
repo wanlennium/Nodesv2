@@ -34,8 +34,12 @@ Content-Type: application/json
         "password": "Dean2eyh"
     } 
 
-GET http://localhost:3000/users-details
-Authorization: Bearer 
+GET http://localhost:3000/all-users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTU5MzE3Mzg4M30.JZvGNZhhmlywlRPQPZZmqVYf6I6TP5ClJp-SP3srfwI
+
+
+GET http://localhost:3000/user/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTU5MzE3Mzg4M30.JZvGNZhhmlywlRPQPZZmqVYf6I6TP5ClJp-SP3srfwI
 
 GET http://localhost:3000/my-profile
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImlhdCI6MTU5MzE3Nzc2Mn0.Nao08Mgh0NEmbA-yqXlZA2sqMXScPWtDspUdhs7tlAE
