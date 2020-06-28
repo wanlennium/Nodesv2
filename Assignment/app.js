@@ -6,8 +6,6 @@ const userMiddleware = require("./middlewares/user");
 
 app.use(express.json());
 
-// app.use(userMiddleware.authUser);
-
 app.use(userR);
 
 

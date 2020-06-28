@@ -26,7 +26,14 @@ exports.myProfile = (req, res, next) => {
     res.send(user);
 };
 
-exports.deleteUser = (req, res, next) => {};
+exports.deleteUser = (req, res, next) => {
+    const userId = req.params.userId;
+    User.destroy({ where: { id: userId } })
+        .then((result) => {
+        res.send({ message: "ACCOUNT DELETED!" });
+      })
+      .catch((err) => console.log(err));
+};
 
 
 
@@ -76,4 +83,6 @@ exports.login = (req, res, next) => {
         }
     })
     .catch(err => console.log(err));
+
+  
 };

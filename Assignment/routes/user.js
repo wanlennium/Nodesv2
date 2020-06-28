@@ -15,6 +15,8 @@ router.route("/user/:userId").get( userMiddleware.authUser ,userController.userP
 
 router.route("/my-profile").get( userMiddleware.authUser ,userController.myProfile);
 
+router.route("/delete-user/:userId").delete( userMiddleware.authUser ,userController.deleteUser);
+
 
 router.route("/login").post(userController.login);
 

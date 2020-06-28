@@ -43,3 +43,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhd
 
 GET http://localhost:3000/my-profile
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImlhdCI6MTU5MzE3Nzc2Mn0.Nao08Mgh0NEmbA-yqXlZA2sqMXScPWtDspUdhs7tlAE
+
+DELETE  http://localhost:3000/delete-user/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImlhdCI6MTU5MzE3Nzc2Mn0.Nao08Mgh0NEmbA-yqXlZA2sqMXScPWtDspUdhs7tlAE
